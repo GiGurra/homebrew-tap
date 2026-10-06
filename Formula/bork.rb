@@ -1,8 +1,8 @@
 class Bork < Formula
   desc "A pragmatic backend language of guarantees, compiled to Go"
   homepage "https://gigurra.github.io/bork/"
-  url "https://github.com/GiGurra/bork/archive/refs/tags/v0.0.153.tar.gz"
-  sha256 "d0aca1f06b47588c5ce5dc7c132cc241c43b481decbb09355c0397533974ae5d"
+  url "https://github.com/GiGurra/bork/archive/refs/tags/v0.0.154.tar.gz"
+  sha256 "5f952563a2f191447285552d3499396b2389e649a72c67f7201f790cd86a534e"
   license "MIT"
 
   # The installed compiler invokes Go when building programs.
