@@ -1,0 +1,28 @@
+name: Test oh-shit-meeting formula
+
+on:
+  pull_request:
+    paths:
+      - Formula/oh-shit-meeting.rb
+      - .github/workflows/test-oh-shit-meeting.yml
+  push:
+    branches: [main]
+    paths:
+      - Formula/oh-shit-meeting.rb
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest, ubuntu-24.04-arm]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: Homebrew/actions/setup-homebrew@main
+      - run: brew install gigurra/tap/oh-shit-meeting
+      - run: brew test gigurra/tap/oh-shit-meeting
+      - run: brew audit --strict gigurra/tap/oh-shit-meeting
