@@ -8,7 +8,7 @@ tag=${1:-$(curl -fsSL "https://api.github.com/repos/$repo/releases/latest" | sed
 [ -n "$tag" ] || { echo "could not determine release tag" >&2; exit 1; }
 sums=$(curl -fsSL --retry 5 "https://github.com/$repo/releases/download/$tag/checksums.txt")
 formula=Formula/oh-shit-meeting.rb
-sed -i.bak "s/^  version \".*\"/  version \"${tag#v}\"/" "$formula"
+sed -i.bak "s|/releases/download/[^/]*/|/releases/download/$tag/|" "$formula"
 for asset in darwin_arm64_v8.0 linux_amd64_v1 linux_arm64_v8.0; do
   sum=$(printf '%s\n' "$sums" | awk -v f="oh-shit-meeting_$asset.tar.gz" '$2 == f { print $1 }')
   [ -n "$sum" ] || { echo "no checksum for $asset in $tag" >&2; mv "$formula.bak" "$formula"; exit 1; }

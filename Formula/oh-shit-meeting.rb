@@ -1,23 +1,22 @@
 class OhShitMeeting < Formula
   desc "Obnoxious, hard-to-miss alerts before your calendar meetings start"
   homepage "https://github.com/GiGurra/oh-shit-meeting"
-  version "0.0.30"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/GiGurra/oh-shit-meeting/releases/download/v#{version}/oh-shit-meeting_darwin_arm64_v8.0.tar.gz"
+      url "https://github.com/GiGurra/oh-shit-meeting/releases/download/v0.0.30/oh-shit-meeting_darwin_arm64_v8.0.tar.gz"
       sha256 "9e65620f1fd253ce61f3972cf602ae04120a1d30c46f5c3ad64f4dec8f146fe4"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/GiGurra/oh-shit-meeting/releases/download/v#{version}/oh-shit-meeting_linux_amd64_v1.tar.gz"
+      url "https://github.com/GiGurra/oh-shit-meeting/releases/download/v0.0.30/oh-shit-meeting_linux_amd64_v1.tar.gz"
       sha256 "c358d96210b8f130bccb74ac61e4829cbc8275de2c377757d523074a3acfb942"
     end
     on_arm do
-      url "https://github.com/GiGurra/oh-shit-meeting/releases/download/v#{version}/oh-shit-meeting_linux_arm64_v8.0.tar.gz"
+      url "https://github.com/GiGurra/oh-shit-meeting/releases/download/v0.0.30/oh-shit-meeting_linux_arm64_v8.0.tar.gz"
       sha256 "62915037010ed67cf8bd1f40111a8ab7ff7735f97a111711fbd29e8411331764"
     end
   end
