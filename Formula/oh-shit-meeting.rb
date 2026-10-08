@@ -40,6 +40,7 @@ class OhShitMeeting < Formula
       nohup "#{opt_bin}/oh-shit-meeting" "$@" >>"$log" 2>&1 </dev/null &
       echo "oh-shit-meeting started (pid $!), logging to $log"
     SH
+    chmod 0755, bin/"oh-shit-meeting-bg"
   end
 
   def caveats
