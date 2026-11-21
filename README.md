@@ -3,6 +3,7 @@
 ```sh
 brew install gigurra/tap/bork
 brew install gigurra/tap/oh-shit-meeting
+brew install gigurra/tap/counterslop
 ```
 
 Formulas here are updated automatically by the release workflows of
@@ -32,3 +33,15 @@ To point the formula at a release manually:
 scripts/update-oh-shit-meeting.sh          # latest release
 scripts/update-oh-shit-meeting.sh v0.0.30  # specific tag
 ```
+
+## counterslop
+
+A browser parody shooter: one binary serves the web client and runs the game server.
+
+```sh
+counterslop                                  # then open http://localhost:8080
+counterslop --addr 127.0.0.1:9000 --bots 4   # see counterslop --help
+```
+
+Built from source (needs Go at build time). `brew install --HEAD gigurra/tap/counterslop`
+builds main.
