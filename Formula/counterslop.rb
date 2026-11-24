@@ -1,8 +1,8 @@
 class Counterslop < Formula
   desc "Browser parody shooter: game server and web client in one binary"
   homepage "https://github.com/GiGurra/counterslop"
-  url "https://github.com/GiGurra/counterslop/archive/refs/tags/v0.1.60.tar.gz"
-  sha256 "1064152e70db59a483cbf0f6e7fb36be2af70138e0cad5fa614805ede03b3dba"
+  url "https://github.com/GiGurra/counterslop/archive/refs/tags/v0.1.61.tar.gz"
+  sha256 "37863a8346fceba9354384c22a7e4e779989ff057af6171d99e24411d4d77fbd"
   license "MIT"
   head "https://github.com/GiGurra/counterslop.git", branch: "main"
 
